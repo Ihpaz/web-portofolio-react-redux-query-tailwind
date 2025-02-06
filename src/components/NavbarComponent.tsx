@@ -5,6 +5,7 @@ import TextSubTitle from './atoms/TextSubTitle';
 import { useSelector } from "react-redux";
 import { RootState } from "../state/store";
 import TextMenu from './atoms/TextMenu';
+import WeatherComponent from './WeatherComponent';
 
 const NavbarComponent: React.FC = () => {
     const nama = useSelector((state: RootState) => state.nama.value);
@@ -21,7 +22,7 @@ const NavbarComponent: React.FC = () => {
                 <TextMenu text='Contact' link='#contact' />
             </div>
             <div className='flex gap-7 justify-around'>
-                <TextSubTitle text={`Jakarta 30 C`} />
+                <WeatherComponent />
             </div>
         </div>
     )
