@@ -11,15 +11,12 @@ import {
     MoveDirection,
     OutMode,
   } from "@tsparticles/engine";
-import ButtonMedium from '../components/ButtonMedium';
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../state/store";
-import { setNama } from '../state/nama/namaSlice';
+import InputNamaComponent from '../components/InputNamaComponent';
+
 
 const WelcomePage: React.FC = () => {
     const [init, setInit] = useState(false);
-    const nama = useSelector((state: RootState) => state.nama.value);
-    const dispatch = useDispatch<AppDispatch>();
+  
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -39,7 +36,7 @@ const WelcomePage: React.FC = () => {
       () => ({
         background: {
           color: {
-            value: "#2a1454",
+            value: "#0D0817",
           },
         },
         fpsLimit: 120,
@@ -106,28 +103,27 @@ const WelcomePage: React.FC = () => {
       [],
     );
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(setNama(event.target.value));
-    };
+
 
     if(init){
         return (
             <div >
                  <div className=' relative w-full h-full flex flex-col items-center pt-40 gap-3 z-50 px-5'>
                     
-                    <TextTitle text="Welcome to My Portfolio" />
+                    <TextTitle text="Welcome to My Portofolio Website" />
+
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:w-[700px] my-5 items-center'>
+                      <div className='flex flex-col items-end pr-4'>
+                        <ImageComponent src={ihpaz} alt="image" width='w-36' height='h-36' rounded={true} border={true}/>
+                      </div>
+                      <div className='col-span-2 flex flex-col'>
+                        <TextSubTitle text="Hello There 😎" />
+                        <TextSubTitle text="My name Is Ihpaz" />
+                        <TextSubTitle text="Let me know your name first !" />
+                      </div>  
+                    </div>
+                    <InputNamaComponent />
                     
-                    <ImageComponent src={ihpaz} alt="image" width='w-40' height='h-40' rounded={true} border={true}/>
-                    
-                    <TextSubTitle text="Hello There 😎, my name Is Ihpaz, let me know your name!" />
-                        <input 
-                            type="text" 
-                            placeholder="Enter your name" 
-                            value={nama} 
-                            onChange={handleInputChange} 
-                            className=" max-w-md p-2 border-b-2 border-white bg-transparent text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500"
-                        />
-                    {nama ? <div className='flex flex-col gap-3'> <TextSubTitle text={`Hello ${nama}`} />  <ButtonMedium text='GO' to='home' /> </div>:''} 
                 </div>
                 <Particles
                     id="tsparticles"

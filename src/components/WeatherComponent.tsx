@@ -1,6 +1,7 @@
 import React from 'react';
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-
+import {useQuery } from "@tanstack/react-query";
+import ImageComponent from './ImageComponent';
+import weather from '../assets/weather.gif';
 
 const WeatherComponent: React.FC = () => {
     const apiKey = "dd0b3155040d13e208c07cd2e7a2b985"; //hanya untuk contoh, api ini free, di real project pakai env
@@ -24,6 +25,7 @@ const WeatherComponent: React.FC = () => {
              <h1 className="text-2xl font-bold text-white shadow-2xs">Jakarta {Math.floor(data.main.temp-273) }
              </h1>
              <p className=' text-2xl'>°C</p>
+             <ImageComponent src={weather} alt="gif" width='w-8' height='h-8' rounded={true} />
         </div>
        
     );

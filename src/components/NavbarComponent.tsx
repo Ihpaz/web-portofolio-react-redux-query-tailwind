@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import reactLogo from '../assets/react.svg';
 import ImageComponent from './ImageComponent';
 import TextSubTitle from './atoms/TextSubTitle';
 import { useSelector } from "react-redux";
@@ -7,7 +6,7 @@ import { RootState } from "../state/store";
 import TextMenu from './atoms/TextMenu';
 import WeatherComponent from './WeatherComponent';
 import { FiMenu, FiX } from 'react-icons/fi';
-
+import avatar from '../assets/avatar.jpg';
 const NavbarComponent: React.FC = () => {
     const nama = useSelector((state: RootState) => state.nama.value);
     const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +16,10 @@ const NavbarComponent: React.FC = () => {
             <div className='flex justify-between items-center'>
 
                 <div className='flex gap-2 items-center'>
-                    <ImageComponent src={reactLogo} alt="image" width='w-8' height='h-6' />
-                    <TextSubTitle text={`Hello ${nama}`} />
+                    < a href='/' className='flex gap-2 items-center text-2xl font-bold'>
+                        <ImageComponent src={avatar} alt="image" width='w-8' height='h-8' rounded={true} />
+                        <TextSubTitle text={`Hello ${nama}`} />
+                    </a>
                 </div>
 
                 <div className='hidden md:flex gap-7'>

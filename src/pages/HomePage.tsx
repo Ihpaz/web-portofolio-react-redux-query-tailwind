@@ -2,6 +2,7 @@ import React from 'react';
 import NavbarComponent from '../components/NavbarComponent';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ProfileComponents from '../components/ProfileComponents';
+import ResumesComponents from '../components/ResumesComponents';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,6 +21,7 @@ const HomePage: React.FC = () => {
           <NavbarComponent />   
           <div className='w-full h-full flex flex-col gap-28 items-center mt-52'>  
             <ProfileComponents />
+            <ResumesComponents />
           </div>
         </div>
         </QueryClientProvider>
