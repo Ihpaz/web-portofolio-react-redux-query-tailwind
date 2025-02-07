@@ -2,7 +2,7 @@ import React, { useState,useEffect,useMemo } from 'react';
 import TextTitle from '../components/atoms/TextTitle';
 import TextSubTitle from '../components/atoms/TextSubTitle';
 import ImageComponent from '../components/ImageComponent';
-import ihpaz from '../assets/ihpaz.png'; // Adjust the path as needed
+import ihpaz from '../assets/ihpaz.png'; 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import {
