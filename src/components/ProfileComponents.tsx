@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import ButtonLarge from './ButtonLarge';
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import TextSubTitle from './atoms/TextSubTitle';
 
 
 const ProfileComponents: React.FC = () => {
@@ -17,7 +18,8 @@ const ProfileComponents: React.FC = () => {
                 <h1 className='text-4xl font-bold text-white '>I am Muhamad Ihpaz Ramadhan</h1>
                 <h1 className=' text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-400'>I am a Fullstack Developer</h1>
                 <p className=' text-2xl font-bold text-white'>I am a skilled Full-Stack Web Developer with expertise in PHP, JavaScript, and Java, specializing in building dynamic and scalable web applications. With a strong foundation in both frontend and backend development.</p>
-                <div className='flex gap-4 mt-4'>
+                <div className='grid grid-cols-2 md:flex gap-4 mt-4'>
+                    <TextSubTitle text='Get in touch !' />
                     <ButtonLarge text='Download CV' type='download' to='Ihpaz-R-CV-2025.pdf' >
                         <FaCloudDownloadAlt />
                     </ButtonLarge>

@@ -16,7 +16,7 @@ const CardResumeComponent: React.FC<CardResumeProps> = (resume) => {
 
     return (
       <div className="group relative flex flex-col items-center gap-1 w-full md:w-[600px] border-0 bg-[#1A1229] rounded-md cursor-pointer hover:border-2 hover:border-indigo-900" key={resume.data.id}>
-         <p className=" hidden group-hover:block w-fit z-50 absolute bg-[#1A1229] rounded-md">
+         <p className=" hidden group-hover:block w-fit z-50 absolute bg-[#1A1229] p-2 w-full">
             {resume.data.description}
         </p>
         <ImageComponent src={resume.data?.image} alt="resume" width='w-[600px]' height='h-80' classDynamics="" />

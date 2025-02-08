@@ -1,11 +1,11 @@
-type Resumes = {
-    id: number;
-    title: string;
-    description: string;
-    skills: string[];
-    link?: string;
-    image: string;
-}
+    type Resumes = {
+        id: number;
+        title: string;
+        description: string;
+        skills: string[];
+        link?: string;
+        image: string;
+    }
   
     const Resumes: Resumes[] = [
         {
@@ -50,7 +50,7 @@ type Resumes = {
           {
             id: 6,
             title: "Outlet Management System",
-            description: "Dashboard for monitoring Golden Lamian outlet activities, fetching data from Google Spreadsheet API, and generating analytics dashboards.",
+            description: "Dashboard for monitoring Golden Lamian outlets activities, fetching data from Google Spreadsheet API, and generating analytics dashboards.",
             skills: ["Nest JS", "Angular", "Mysql"],
             link: "https://github.com/Ihpaz/operationfrontend",
             image:'operations-1.png'
@@ -58,7 +58,7 @@ type Resumes = {
           {
             id: 7,
             title: "Booking Flight API",
-            description: "Create Booking Flight API for E-Travel APP PLN ICON integrated by Drupadi API",
+            description: "Create Booking Flight API for E-Travel APP PLN ICON integrated with Drupadi API",
             skills: ["Spring Boot","SQL Server"],
             image:'fligh-1.png'
           },
@@ -85,10 +85,18 @@ type Resumes = {
             link: "https://dev-ikn.air.id",
             image:'ems-1.png'
           },
+          {
+            id: 11,
+            title: "Portofolio Website",
+            description: "My portofolio website was build using React Js with react-router, react-query , redux-toolkit and tailwindcss",
+            skills: ["React Js"],
+            link: "https://dev-ikn.air.id",
+            image:'portofolio-1.png'
+          },
     ];
 
 
-  export const categories = ["All", "Laravel", "Vue Js", "Nest JS", "Angular", "Codeigniter","Spring Boot"];
+  export const categories = ["All", "Laravel", "Vue Js", "Nest JS", "Angular", "Codeigniter","Spring Boot","React Js"];
   
   export default Resumes;
   

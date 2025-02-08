@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Resumes,{categories} from "../data/Resumes";
-import CardResume from "./CardResumeComponent";
 import CardResumeComponent from "./CardResumeComponent";
 
 const ResumesComponents: React.FC = () => {
@@ -21,7 +20,7 @@ const ResumesComponents: React.FC = () => {
         diverse expertise in web and software development.
       </p>
 
-      <div className=" justify-center mt-6 space-x-4 grid grid-cols-2 md:grid-cols-7 gap-2 md:w-[800px] mx-auto">
+      <div className=" justify-center mt-6 space-x-4 grid grid-cols-2 md:grid-cols-8 gap-2 md:w-[950px] mx-auto">
         {categories.map((category) => (
           <button
             key={category}
@@ -51,6 +50,7 @@ const ResumesComponents: React.FC = () => {
           </p>
         )}
       </div>
+    
     </div>
   );
 };

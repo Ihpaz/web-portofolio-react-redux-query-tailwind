@@ -24,8 +24,7 @@ const NavbarComponent: React.FC = () => {
 
                 <div className='hidden md:flex gap-7'>
                     <TextMenu text='Profile' link='#profile' isActive={true} />
-                    <TextMenu text='Resumes' link='#work' />
-                    <TextMenu text='Skills' link='#contact' />
+                    <TextMenu text='Projects' link='#projects' />
                     <TextMenu text='Educations' link='#educations' />
                 </div>
 
