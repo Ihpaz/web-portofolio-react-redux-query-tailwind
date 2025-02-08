@@ -110,13 +110,13 @@ const WelcomePage: React.FC = () => {
             <div >
                  <div className=' relative w-full h-full flex flex-col items-center pt-40 gap-3 z-50 px-5'>
                     
-                    <TextTitle text="Welcome to My Portofolio Website" />
+                    <TextTitle text="Welcome to My Portofolio Web" classDynamics='text-center' />
 
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:w-[700px] my-5 items-center'>
-                      <div className='flex flex-col items-end pr-4'>
+                      <div className='flex flex-col items-center md:items-end pr-4 '>
                         <ImageComponent src={ihpaz} alt="image" width='w-36' height='h-36' rounded={true} border={true}/>
                       </div>
-                      <div className='col-span-2 flex flex-col'>
+                      <div className='col-span-2 flex flex-col items-center md:items-start'>
                         <TextSubTitle text="Hello There 😎" />
                         <TextSubTitle text="My name Is Ihpaz" />
                         <TextSubTitle text="Let me know your name first !" />

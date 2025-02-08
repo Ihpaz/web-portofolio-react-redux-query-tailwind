@@ -23,7 +23,7 @@ const NavbarComponent: React.FC = () => {
     };
 
     return (
-        <nav className='w-full border-b-[0.2px] border-gray-500 text-white p-6 fixed z-50 bg-gradient-to-r from-black via-[#0b0a13] to-[#1a1330]'>
+        <nav className='w-full border-b-[0.2px] border-gray-500 text-white p-6 fixed z-50 bg-gradient-to-r from-black via-[#0b0a13] to-[#1a1330]'  >
             <div className='flex justify-between items-center'>
 
                 <div className='flex gap-2 items-center'>
@@ -56,9 +56,10 @@ const NavbarComponent: React.FC = () => {
          
             {isOpen && (
                 <div className='flex flex-col gap-4 mt-6 md:hidden  border-gray-500'>
-                    <TextMenu text='Profile' link='#profile' isActive={true} />
-                    <TextMenu text='Working Experience' link='#work' />
-                    <TextMenu text='Contact' link='#contact' />
+                    <TextMenu text='Profile' link='#profile' isActive={location.hash == '#profile' ? true : false} isDiffPage={basePath ? true:false} />
+                    <TextMenu text='Projects' link='#projects' isActive={location.hash == '#projects' ? true : false}  isDiffPage={basePath ? true:false} />
+                    <TextMenu text='Educations' link='#educations' isActive={location.hash == '#educations' ? true : false}  isDiffPage={basePath ? true:false} />
+            
                     <div className='mt-5'>
                         <WeatherComponent />
                     </div>

@@ -3,22 +3,28 @@ import ProfileComponents from '../components/ProfileComponents';
 import ResumesComponents from '../components/ResumesComponents';
 import EducationComponents from '../components/EducationComponents';
 import { useLocation } from 'react-router-dom';
+import useScrollSpy from '../hooks/useScrollSpy';
 
 const HomePage: React.FC = () => {
     const location = useLocation();
+    const sectionIds = ["profile", "projects", "educations"];
 
-    //agar dari halaman lain bisa langsung ke section
+    useScrollSpy(sectionIds); 
+    // agar dari halaman lain bisa langsung ke section
     useEffect(() => {
         if (location.hash) {
+          setTimeout(() => {
             const element = document.getElementById(location.hash.substring(1));
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+              element.scrollIntoView({ behavior: "smooth", block: "start" });
             }
+          }, 100); 
         }
     }, [location]);
+    
     return (
       
-          <div className='w-full h-full flex flex-col gap-28 items-center my-52 ' id="profile">  
+          <div className='w-full h-full flex flex-col gap-28 items-center my-52 '>  
             <ProfileComponents />
             <ResumesComponents />
             <EducationComponents/>

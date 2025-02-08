@@ -1,15 +1,15 @@
-import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import React,{useCallback} from 'react';
+import { useDispatch, useSelector,shallowEqual } from "react-redux";
 import { AppDispatch, RootState } from "../../state/store";
 import { setNama } from '../../state/nama/namaSlice';
 
 const Input: React.FC = () => {
-    const nama = useSelector((state: RootState) => state.nama.value);
+    const nama = useSelector((state: RootState) => state.nama.value, shallowEqual);
     const dispatch = useDispatch<AppDispatch>();
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(setNama(event.target.value));
-    };
+    }, [dispatch]);
     
     return (
         <input 

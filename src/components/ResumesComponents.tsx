@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState,useMemo } from "react";
 import Resumes,{categories} from "../data/Resumes";
 import CardResumeComponent from "./CardResumeComponent";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ResumesComponents: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredResumes =
-    selectedCategory === "All"
+  const filteredResumes = useMemo(() => {
+    return selectedCategory === "All"
       ? Resumes
-      : Resumes.filter((Resumes) => Resumes.skills.includes(selectedCategory));
+      : Resumes.filter((resume) => resume.skills.includes(selectedCategory));
+  }, [selectedCategory, Resumes]);
 
   return (
+   
     <div className="bg-[#0D0817] text-white py-16 text-center px-6 md:px-28 w-full" id="projects">
       <h2 className="text-4xl font-bold color-main">
         My Recent Projects
@@ -36,22 +39,37 @@ const ResumesComponents: React.FC = () => {
         ))}
       </div>
 
-  
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-24">
-        {filteredResumes.length > 0 ? (
-          filteredResumes.map((resume,index) => (
-
-            <CardResumeComponent data={resume} key={index}/>
-           
-          ))
-        ) : (
-          <p className="text-gray-400 col-span-full">
-            No resumes found for "{selectedCategory}".
-          </p>
-        )}
-      </div>
-    
+      <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.05 }} 
+            className="flex flex-col gap-8" 
+        >
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-24">
+            <AnimatePresence>
+                {filteredResumes.length > 0 ? (
+                filteredResumes.map((resume,index) => (
+                    <motion.div
+                        key={resume.id} 
+                        initial={{ opacity: 0, y: 20 }} 
+                        animate={{ opacity: 1, y: 0 }} 
+                        exit={{ opacity: 0, y: -20 }} 
+                        transition={{ duration: 0.5 }} 
+                    >
+                        <CardResumeComponent data={resume} key={index}/>
+                    </motion.div>
+                ))
+                ) : (
+                    <p className="text-gray-400 col-span-full">
+                        No project found for "{selectedCategory}".
+                    </p>
+                )}
+            </AnimatePresence>
+        </div>
+     </motion.div>
     </div>
+   
   );
 };
 
