@@ -1,6 +1,5 @@
 export const downloadFile = (file_url: string) => {
-
-  
+    
     const anchor = document.createElement('a');
     anchor.style.display = 'none';
     document.body.appendChild(anchor);
