@@ -11,7 +11,7 @@ const ResumesComponents: React.FC = () => {
       : Resumes.filter((Resumes) => Resumes.skills.includes(selectedCategory));
 
   return (
-    <div className="bg-[#0D0817] text-white py-16 text-center px-6 md:px-28 w-full">
+    <div className="bg-[#0D0817] text-white py-16 text-center px-6 md:px-28 w-full" id="projects">
       <h2 className="text-4xl font-bold color-main">
         My Recent Projects
       </h2>

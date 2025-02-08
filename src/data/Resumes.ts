@@ -1,4 +1,4 @@
-    type Resumes = {
+    export type ResumesType = {
         id: number;
         title: string;
         description: string;
@@ -7,7 +7,7 @@
         image: string;
     }
   
-    const Resumes: Resumes[] = [
+    const Resumes: ResumesType[] = [
         {
             id: 1,
             title: "LMS (Cyber Threat Intelligent) for KEMHAN",
@@ -99,4 +99,5 @@
   export const categories = ["All", "Laravel", "Vue Js", "Nest JS", "Angular", "Codeigniter","Spring Boot","React Js"];
   
   export default Resumes;
+  
   

@@ -13,7 +13,7 @@ const ProfileComponents: React.FC = () => {
    
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-28  px-6 md:px-28'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-28  px-6 md:px-28' >
             <div className=' col-md flex flex-col gap-4'>
                 <h1 className='text-4xl font-bold text-white '>I am Muhamad Ihpaz Ramadhan</h1>
                 <h1 className=' text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-400'>I am a Fullstack Developer</h1>

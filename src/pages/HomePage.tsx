@@ -1,38 +1,32 @@
-import React from 'react';
-import NavbarComponent from '../components/NavbarComponent';
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import React,{useEffect}from 'react';
 import ProfileComponents from '../components/ProfileComponents';
 import ResumesComponents from '../components/ResumesComponents';
 import EducationComponents from '../components/EducationComponents';
-import FooterComponent from '../components/FooterComponent';
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-});
+import { useLocation } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
- 
+    const location = useLocation();
 
+    //agar dari halaman lain bisa langsung ke section
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+            }
+        }
+    }, [location]);
     return (
-        <QueryClientProvider client={queryClient}>
-        <div className='relative w-full min-h-full flex flex-col gap-3 bg-gradient-to-r from-black via-[#0b0a13] to-[#1a1330]'>
-          <NavbarComponent />   
-          <div className='w-full h-full flex flex-col gap-28 items-center my-52 '>  
+      
+          <div className='w-full h-full flex flex-col gap-28 items-center my-52 ' id="profile">  
             <ProfileComponents />
             <ResumesComponents />
             <EducationComponents/>
           </div>
-          <FooterComponent />
-        </div>
-        </QueryClientProvider>
+           
       
     );
     
-   
 };
 
 export default HomePage;

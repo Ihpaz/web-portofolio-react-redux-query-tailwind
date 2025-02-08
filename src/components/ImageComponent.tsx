@@ -11,9 +11,12 @@ type ImageProps = {
 }
 
 const ImageComponent: React.FC<ImageProps> = ({ src, alt, width, height, rounded = false, border = false,classDynamics="" }) => {
+
+    let publicSrc = src;
+    if (!src.startsWith('/')) publicSrc = `${import.meta.env.BASE_URL}${src}`;
     return (
         <img
-            src={src}
+            src={publicSrc}
             alt={alt}
             className={` ${width} ${height} ${rounded ? 'rounded-full' : ''} object-fill ${rounded ? 'rounded-full' : ''} 
             ${ border ? 'border-2 border-white hover:border-indigo-900':''} ${classDynamics}`}

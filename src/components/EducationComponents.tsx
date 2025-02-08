@@ -8,7 +8,7 @@ const EducationComponents: React.FC = () => {
   
 
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-24">
+    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-24" id="educations">
         <div className="grid grid-cols-1 gap-4 px-2 md:px-24">
             <div className="flex gap-2">
                 <SiGooglescholar color="purple" size={45} />
