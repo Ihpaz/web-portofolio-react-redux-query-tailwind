@@ -3,7 +3,6 @@ import NavbarComponent from '../components/NavbarComponent';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import FooterComponent from '../components/FooterComponent';
 import { Outlet } from 'react-router-dom';
-import ScrollToTopButton from '../components/ScrollToTopButtonComponent';
 import ScrollToTopButtonComponent from '../components/ScrollToTopButtonComponent';
 
 
