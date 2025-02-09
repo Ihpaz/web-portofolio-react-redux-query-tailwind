@@ -1,7 +1,6 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import ImageComponent from "./ImageComponent";
 import { SiPhp } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { TbBrandJavascript } from "react-icons/tb";
