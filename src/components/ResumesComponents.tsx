@@ -46,7 +46,7 @@ const ResumesComponents: React.FC = () => {
             viewport={{ once: false, amount: 0.05 }} 
             className="flex flex-col gap-8" 
         >
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-24">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-18">
             <AnimatePresence>
                 {filteredResumes.length > 0 ? (
                 filteredResumes.map((resume,index) => (

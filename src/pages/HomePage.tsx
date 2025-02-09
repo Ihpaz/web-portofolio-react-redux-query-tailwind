@@ -13,12 +13,12 @@ const HomePage: React.FC = () => {
     // agar dari halaman lain bisa langsung ke section
     useEffect(() => {
         if (location.hash) {
-          setTimeout(() => {
+        
             const element = document.getElementById(location.hash.substring(1));
             if (element) {
-              element.scrollIntoView({ behavior: "smooth", block: "start" });
+              element.scrollIntoView({ behavior: "instant" });
             }
-          }, 100); 
+       
         }
     }, [location]);
     

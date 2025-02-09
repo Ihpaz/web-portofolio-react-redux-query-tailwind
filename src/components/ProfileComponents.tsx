@@ -44,7 +44,7 @@ const ProfileComponents: React.FC = () => {
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <ImageComponent src={ihpaz} alt='profile' width='w-96' height='h-96' border={true} classDynamics='rounded-3xl ' />
+                    <ImageComponent src={ihpaz} alt='profile' width='w-96' height='h-96' border={true} classDynamics='rounded-3xl  rotate-6 hover:rotate-0 hover:border-3 ' />
                 </div>
            
             </div>

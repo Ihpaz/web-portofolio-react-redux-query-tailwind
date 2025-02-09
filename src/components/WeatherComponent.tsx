@@ -4,7 +4,7 @@ import ImageComponent from './ImageComponent';
 import weather from '../assets/weather.gif';
 
 const WeatherComponent: React.FC = () => {
-    const apiKey = "dd0b3155040d13e208c07cd2e7a2b985"; //hanya untuk contoh, api ini free, di real project pakai env
+    const apiKey = `${import.meta.env.VITE_API_KEY}`; //hanya untuk contoh, api ini free, di real project pakai env
     const lat= -6.2088;
     const lon= 106.8456;
     

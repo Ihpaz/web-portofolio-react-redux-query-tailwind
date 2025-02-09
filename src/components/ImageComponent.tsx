@@ -19,7 +19,7 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt, width, height, rounded
             src={publicSrc}
             alt={alt}
             className={` ${width} ${height} ${rounded ? 'rounded-full' : ''} object-fill ${rounded ? 'rounded-full' : ''} 
-            ${ border ? 'border-2 border-white hover:border-indigo-900':''} ${classDynamics}`}
+            ${ border ? 'border-2  border-indigo-900 hover:border-indigo-400':''} ${classDynamics}`}
         />
     );
 };

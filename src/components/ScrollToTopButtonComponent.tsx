@@ -20,8 +20,7 @@ const ScrollToTopButtonComponent = () => {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: -10});
-    
+    window.scrollTo({ top: -10,behavior:"instant"});
   };
 
   return (
