@@ -16,7 +16,7 @@ const EducationComponents: React.FC = () => {
         viewport={{ once: false, amount: 0.2 }} // Trigger when 20% of the section is in view
         className="flex flex-col gap-8" 
     >
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-24" id="educations">
+        <div className=" bg-[#0D0817] w-full py-24 grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-24 min-h-[800px]" id="educations">
             <div className="grid grid-cols-1 gap-4 px-2 md:px-24">
                 <div className="flex gap-2 justify-center">
                     <SiGooglescholar color="purple" size={45} />

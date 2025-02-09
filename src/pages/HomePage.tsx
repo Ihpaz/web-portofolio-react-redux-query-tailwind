@@ -4,10 +4,11 @@ import ResumesComponents from '../components/ResumesComponents';
 import EducationComponents from '../components/EducationComponents';
 import { useLocation } from 'react-router-dom';
 import useScrollSpy from '../hooks/useScrollSpy';
+import SkillsComponents from '../components/SkillsComponent';
 
 const HomePage: React.FC = () => {
     const location = useLocation();
-    const sectionIds = ["profile", "projects", "educations"];
+    const sectionIds = ["profile","skills", "projects", "educations"];
 
     useScrollSpy(sectionIds); 
     // agar dari halaman lain bisa langsung ke section
@@ -24,8 +25,9 @@ const HomePage: React.FC = () => {
     
     return (
       
-          <div className='w-full h-full flex flex-col gap-28 items-center my-52 '>  
+          <div className='w-full h-full flex flex-col gap-0 items-center mt-48 '>  
             <ProfileComponents />
+            <SkillsComponents />
             <ResumesComponents />
             <EducationComponents/>
           </div>

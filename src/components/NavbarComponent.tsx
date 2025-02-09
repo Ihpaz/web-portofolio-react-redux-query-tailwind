@@ -36,6 +36,7 @@ const NavbarComponent: React.FC = () => {
                 
                 <div className='hidden md:flex gap-7'>
                     <TextMenu text='Profile' link='#profile' isActive={location.hash == '#profile' ? true : false} isDiffPage={basePath ? true:false} />
+                    <TextMenu text='Skills' link='#skills' isActive={location.hash == '#skills' ? true : false}  isDiffPage={basePath ? true:false} />
                     <TextMenu text='Projects' link='#projects' isActive={location.hash == '#projects' ? true : false}  isDiffPage={basePath ? true:false} />
                     <TextMenu text='Educations' link='#educations' isActive={location.hash == '#educations' ? true : false}  isDiffPage={basePath ? true:false} />
                 </div>
@@ -57,6 +58,7 @@ const NavbarComponent: React.FC = () => {
             {isOpen && (
                 <div className='flex flex-col gap-4 mt-6 md:hidden  border-gray-500'>
                     <TextMenu text='Profile' link='#profile' isActive={location.hash == '#profile' ? true : false} isDiffPage={basePath ? true:false} />
+                    <TextMenu text='Skills' link='#skills' isActive={location.hash == '#skills' ? true : false}  isDiffPage={basePath ? true:false} />
                     <TextMenu text='Projects' link='#projects' isActive={location.hash == '#projects' ? true : false}  isDiffPage={basePath ? true:false} />
                     <TextMenu text='Educations' link='#educations' isActive={location.hash == '#educations' ? true : false}  isDiffPage={basePath ? true:false} />
             

@@ -14,8 +14,8 @@ const ResumesComponents: React.FC = () => {
 
   return (
    
-    <div className="bg-[#0D0817] text-white py-16 text-center px-6 md:px-28 w-full" id="projects">
-      <h2 className="text-4xl font-bold color-main">
+    <div className=" text-white py-16 text-center px-6 md:px-28 w-full" id="projects">
+      <h2 className="text-5xl font-bold color-main">
         My Recent Projects
       </h2>
       <p className="mt-4 text-gray-400 max-w-2xl mx-auto">

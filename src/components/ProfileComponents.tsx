@@ -21,7 +21,7 @@ const ProfileComponents: React.FC = () => {
             viewport={{ once: false, amount: 0.2 }} // Trigger when 20% of the section is in view
             className="flex flex-col gap-8" 
         >
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-28  px-6 md:px-28' >
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-28  px-6 md:px-28 pb-16 min-h-[600px]' >
                 <div className=' col-md flex flex-col gap-4'>
                     <h1 className='text-4xl font-bold text-white '>I am Muhamad Ihpaz Ramadhan</h1>
                     <TextTitle text='I am a Fullstack Developer' />
@@ -44,7 +44,7 @@ const ProfileComponents: React.FC = () => {
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <ImageComponent src={ihpaz} alt='profile' width='w-96' height='h-96' border={true} classDynamics='rounded-3xl  rotate-6 hover:rotate-0 hover:border-3 ' />
+                    <ImageComponent src={ihpaz} alt='profile' width='w-96' height='h-96' border={true} classDynamics='rounded-3xl  rotate-6 hover:rotate-0 hover:border-3 active:rotate-0 focus:rotate-0' />
                 </div>
            
             </div>

@@ -19,7 +19,7 @@ const LayoutPage: React.FC = () => {
 
     return (
         <QueryClientProvider client={queryClient}>
-          <div id="profile" className='relative w-full min-h-full flex flex-col gap-3 bg-gradient-to-r from-black via-[#0b0a13] to-[#1a1330]'>
+          <div id="profile" className='relative w-full min-h-full flex flex-col  bg-gradient-to-r from-black via-[#0b0a13] to-[#1a1330]'>
             <NavbarComponent />  
                 <Outlet/>
             <FooterComponent />

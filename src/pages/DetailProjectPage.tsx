@@ -15,13 +15,13 @@ const DetailProjectPage: React.FC = () => {
                 <h3 className=" text-4xl font-bold p-2 color-main">
                     {project?.title}
                 </h3>
-                <ImageComponent src={project?.image || ""} alt="resume" width='w-full' height='h-[600px]' classDynamics="rounded-md" />
+                <ImageComponent src={project?.image || ""} alt="resume" width='w-full' height='h-[800px]' classDynamics="rounded-md" />
                 <div className=" bg-[#1A1229] p-4 rounnded-md">
                     <p className="h-48 md:h-36 text-white">{project?.description}</p>
                     <div className="text-gray-300 w-full md:w-[900px]  grid grid-cols-2 md:flex gap-2 p-2 items-center ">
                         {
                         project?.skills.map((skill, index) => (
-                                <span key={index} className="mb-2 px-2 text-sm font-bold bg-white text-black rounded-4xl max-w-26  text-center">{skill}</span>
+                                <span key={index} className="mb-2 px-2 text-sm font-bold border-2  border-gray-800 text-gray-300 rounded-4xl max-w-26  text-center">{skill}</span>
                             ))
                         
                         }
