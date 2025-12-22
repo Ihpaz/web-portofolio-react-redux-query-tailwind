@@ -104,7 +104,7 @@
             id: 12,
             title: "Dashboard Monitoring and Integration KFC Data to Netsuite",
             description: "Dashboard for monitoring KFC data and integrating it with Netsuite, including real-time data synchronization and analytics.",
-            skills: ["Spring Boot", "Angular","GCP API", "Oracle"],
+            skills: ["Spring Boot", "Angular","Netsuite API", "Oracle"],
             image:'apintegrasi2.png'
           },
     ];
