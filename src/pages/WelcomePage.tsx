@@ -121,7 +121,7 @@ const WelcomePage: React.FC = () => {
               />
             </div>
             <div className="col-span-2 flex flex-col items-center md:items-start">
-             <TextSubTitle text="Thank you for visiting my portfolio" />
+             <TextSubTitle text="Thank you for visiting" />
               <TextSubTitle text="I am Ihpaz" />
               <TextSubTitle text="Full-Stack Developer" />
             </div>
