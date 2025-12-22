@@ -29,7 +29,7 @@ const ProfileComponents: React.FC = () => {
                     <p className=' text-2xl font-bold text-white'>I am a skilled Full-Stack Web Developer with expertise in PHP, JavaScript, and Java, specializing in building dynamic and scalable web applications. With a strong foundation in both frontend and backend development.</p>
                     <div className='grid grid-cols-2 md:flex gap-4 mt-4'>
                         <TextSubTitle text='Get in touch !' />
-                        <ButtonLarge text='Download CV' type='download' to='Ihpaz-R-CV-2025.pdf' >
+                        <ButtonLarge text='Download CV' type='download' to='CV_IHPAZ_2025_A.pdf' >
                             <FaCloudDownloadAlt />
                         </ButtonLarge>
                         <a href='https://www.linkedin.com/in/muhamad-i-59423189/' target='_blank' rel="noreferrer" className='bg-white text-black p-2 rounded-full flex items-center justify-center'>

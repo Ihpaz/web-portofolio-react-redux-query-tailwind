@@ -11,7 +11,7 @@
       {
             id: 0,
             title: "WMS(Warehouse Management System) for KFC",
-            description: "System to manage KFC goods in the warehouse, including incoming ,production and outgoing goods, stock opname, and delivery orders to outlets. Features include analysis of goods movement and inventory tracking.",
+            description: "A comprehensive warehouse management system for KFC that handles incoming and outgoing stock, production cycles, stock reconciliation, and delivery orders to outlets. Key features include inventory tracking and detailed analysis of goods movement",
             skills: ["Spring Boot", "Angular","Jasper", "Oracle"],
             image:'wms-1.png'
           },
