@@ -8,6 +8,13 @@
     }
   
     const Resumes: ResumesType[] = [
+      {
+            id: 0,
+            title: "WMS(Warehouse Management System) for KFC",
+            description: "System to manage KFC goods in the warehouse, including incoming ,production and outgoing goods, stock opname, and delivery orders to outlets. Features include analysis of goods movement and inventory tracking.",
+            skills: ["Spring Boot", "Angular","Jasper", "Oracle"],
+            image:'wms-1.png'
+          },
         {
             id: 1,
             title: "LMS (Cyber Threat Intelligent) for KEMHAN",
@@ -92,6 +99,13 @@
             skills: ["React Js"],
             link: "https://dev-ikn.air.id",
             image:'portofolio-1.png'
+          },
+           {
+            id: 12,
+            title: "Dashboard Monitoring and Integration KFC Data to Netsuite",
+            description: "Dashboard for monitoring KFC data and integrating it with Netsuite, including real-time data synchronization and analytics.",
+            skills: ["Spring Boot", "Angular","GCP API", "Oracle"],
+            image:'apintegrasi2.png'
           },
     ];
 
