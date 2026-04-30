@@ -29,10 +29,10 @@ const CardResumeComponent: React.FC<CardResumeProps> = (resume) => {
             <h3 className=" text-2xl font-semibold p-4 text-white">
                 {resume.data.title}
             </h3>
-            <div className="text-gray-300 w-full  grid grid-cols-3 md:grid-cols-4  gap-2 p-2 items-center ">
+            <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 px-4 pb-5 pt-2 items-center">
                 {
                     resume.data.skills.map((skill, index) => (
-                        <span key={index} className="mb-2 px-2 py-1 text-sm font-bold border-2  border-gray-800 text-gray-300 rounded-4xl hover:bg-main">{skill}</span>
+                        <span key={index} className="inline-flex min-h-9 items-center justify-center rounded-full border border-purple-300/25 bg-white/[0.08] px-3 py-1.5 text-center text-xs font-semibold text-purple-100 shadow-sm shadow-black/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-purple-300/70 hover:bg-main hover:text-white hover:shadow-lg hover:shadow-purple-500/20">{skill}</span>
                     ))
 
                 }

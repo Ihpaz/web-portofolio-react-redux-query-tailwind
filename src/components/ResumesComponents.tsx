@@ -1,5 +1,5 @@
-import React, { useState,useMemo } from "react";
-import Resumes,{categories} from "../data/Resumes";
+import React, { useMemo, useState } from "react";
+import Resumes, { categories } from "../data/Resumes";
 import CardResumeComponent from "./CardResumeComponent";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -23,15 +23,15 @@ const ResumesComponents: React.FC = () => {
         diverse expertise in web and software development.
       </p>
 
-      <div className=" justify-center mt-6 space-x-4 grid grid-cols-2 md:grid-cols-8 gap-2 md:w-[950px] mx-auto">
+      <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 md:w-[950px] mx-auto">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={` w-28 cursor-pointer px-2 py-2 rounded-full transition-all text-wrap mx-auto ${
+            className={`w-full min-h-11 cursor-pointer rounded-full border px-3 py-2 text-sm font-semibold tracking-wide shadow-lg shadow-black/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-purple-300/80 hover:shadow-purple-500/20 ${
               selectedCategory === category
-                ? "bg-main text-white"
-                : " bg-gray-900 text-gray-300"
+                ? "bg-main border-purple-300/70 text-white"
+                : "border-white/10 bg-white/[0.06] text-gray-300 hover:bg-white/[0.12] hover:text-white"
             }`}
           >
             {category}
