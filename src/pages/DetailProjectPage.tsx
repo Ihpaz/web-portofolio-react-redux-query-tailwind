@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Resumes from "../data/Resumes";
 import { ResumesType } from "../data/Resumes";
@@ -9,12 +9,16 @@ const DetailProjectPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const project: ResumesType | null = id ? Resumes.find((resume) => resume.id === parseInt(id)) || null : null;
 
     const images = project?.images && project.images.length > 0 ? project.images : (project?.image ? [project.image] : []);
 
     return (
-        <div className='w-full h-full flex flex-col items-center my-52'>
+        <div className='w-full h-full flex flex-col items-center mt-28 mb-16'>
             <div className="grid grid-cols-1 gap-8  px-6 md:px-28 w-full">
                 <div className="w-full flex justify-start">
                     <button
@@ -33,7 +37,7 @@ const DetailProjectPage: React.FC = () => {
                 {images.length > 0 ? (
                     <ImageSlider images={images} alt="resume" />
                 ) : (
-                    <ImageComponent src={project?.image || ""} alt="resume" width='w-full' height='h-[800px]' classDynamics="rounded-md" />
+                    <ImageComponent src={project?.image || ""} alt="resume" width='w-full' height='h-[300px] md:h-[450px] lg:h-[550px]' classDynamics="rounded-md !object-contain bg-[#1A1229]" />
                 )}
                 <div className=" bg-[#1A1229] p-4 rounnded-md">
                     <p className="h-48 md:h-36 text-white">{project?.description}</p>

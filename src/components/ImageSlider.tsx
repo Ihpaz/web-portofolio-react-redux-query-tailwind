@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ImageComponent from './ImageComponent';
 
 type ImageSliderProps = {
@@ -27,23 +27,34 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt }) => {
         setCurrentIndex(slideIndex);
     };
 
+    useEffect(() => {
+        if (displayImages.length <= 1) return;
+        const timer = setInterval(() => {
+            setCurrentIndex((prevIndex) => {
+                const isLastSlide = prevIndex === displayImages.length - 1;
+                return isLastSlide ? 0 : prevIndex + 1;
+            });
+        }, 3000);
+        return () => clearInterval(timer);
+    }, [currentIndex, displayImages.length]);
+
     if (!displayImages || displayImages.length === 0) {
         return null;
     }
 
     if (displayImages.length === 1) {
-        return <ImageComponent src={displayImages[0]} alt={alt} width='w-full' height='h-[300px] md:h-[600px] lg:h-[800px]' classDynamics="rounded-md object-contain bg-black" />;
+        return <ImageComponent src={displayImages[0]} alt={alt} width='w-full' height='h-[300px] md:h-[450px] lg:h-[550px]' classDynamics="rounded-md !object-contain bg-[#1A1229]" />;
     }
 
     return (
         <div className="w-full h-full relative group">
-            <div className="w-full h-[300px] md:h-[600px] lg:h-[800px] rounded-md bg-black flex items-center justify-center overflow-hidden relative">
+            <div className="w-full h-[300px] md:h-[450px] lg:h-[550px] rounded-md bg-[#1A1229] flex items-center justify-center overflow-hidden relative">
                 <ImageComponent
                     src={displayImages[currentIndex]}
                     alt={`${alt} ${currentIndex + 1}`}
                     width='w-full'
                     height='h-full'
-                    classDynamics="object-contain rounded-md duration-500"
+                    classDynamics="!object-contain rounded-md duration-500"
                 />
             </div>
 
